@@ -1,19 +1,3 @@
-#include<stdio.h>  
-int main()    
-{    
-int n,r,sum=0,temp;    
-printf("enter the number=");    
-scanf("%d",&n);    
-temp=n;    
-while(n>0)    
-{    
-r=n%10;    
-sum=(sum*10)+r;    
-n=n/10;    
-}    
-if(temp==sum)    
-printf("palindrome number ");    
-else    
-printf("not palindrome");   
-return 0;  
-}   
+num=8
+num_sqrt = num ** 0.5
+print('The square root of %0.3f is %0.3f'%(num ,num_sqrt))
