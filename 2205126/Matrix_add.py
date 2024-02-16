@@ -20,4 +20,5 @@ lst2 = [[6,5,4],
 
 mat3 = mat_add(lst1,lst2)
 
-print(mat3)
+for row in range(len(mat3)):
+    print(mat3[row])
