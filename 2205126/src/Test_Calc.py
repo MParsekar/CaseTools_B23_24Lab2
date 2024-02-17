@@ -24,6 +24,9 @@ class TestCalc(unittest.TestCase):
     def test_powered(self):
         result = TestCalc.calc.powered(10, 2)
         self.assertEqual(result, 100)
+        
+        with self.assertRaises(ValueError):
+        	TestCalc.calc.divide(10, 0)
 
 
 if __name__ == '__main__':
