@@ -15,12 +15,14 @@ def mat_dot(mat1, mat2):
     
     return "col of mat1 != row of mat2"
 
-lst1 = [[3,1,4]]
+lst1 = [[3,4],
+        [7,2],
+        [5,9]]
 
-lst2 = [[4,3],
-        [2,5],
-        [6,8]]
+lst2 = [[3,1,5],
+        [6,9,7]]
 
 mat3 = mat_dot(lst1,lst2)
 
-print(mat3)
+for row in range(len(mat3)):
+    print(mat3[row])
