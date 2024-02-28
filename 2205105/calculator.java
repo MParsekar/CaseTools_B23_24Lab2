@@ -6,7 +6,7 @@ public class calculator{
        int a=obj.nextInt();
        System.out.println("Enter b number");
        int b=obj.nextInt();
-       System.out.println("Enter an Operator");
+       System.out.println("Enter Operator");
        char op=obj.next().charAt(0);
        switch(op){
         case'+':
