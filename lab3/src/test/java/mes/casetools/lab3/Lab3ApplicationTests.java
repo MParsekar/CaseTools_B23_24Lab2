@@ -17,8 +17,8 @@ class Lab3ApplicationTests {
 	@Test
 	void assertAdd(){
 		Calculator calculator =new Calculator();
-		int answer  = calculator.add(1, 2);
-		assertEquals(3, answer);
+		int answer  = calculator.add(5, 2);
+		assertEquals(7, answer);
 	}
 
 }
