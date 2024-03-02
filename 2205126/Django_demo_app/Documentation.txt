@@ -1,0 +1,84 @@
+django-admin startproject <projectname>:
+    command used to initialise a project in django
+
+python manage.py runserver  or  django-admin runserver:
+    command used to start the Django development server. It allows you to run your Django application locally for testing and development purposes.
+
+python manage.py startapp <appname>:
+    command used to create apps.
+
+.vscode/launch.json :
+    includes debugging configurations for views.py
+
+Using django-debug-toolbar for debugging (Alternative for vscode direct debugging):
+    requires installation using 'pip install django-debug-toolbar'
+    requires a proper html response to work
+    reference docs: https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+    settings.py should be modified to include the following:
+        INSTALLED_APPS = [
+            ...
+            'debug_toolbar',
+            ...
+        ]
+        MIDDLEWARE = [
+            ...
+            'debug_toolbar.middleware.DebugToolbarMiddleware',
+            ...
+        ]
+        DEBUG = True
+        INTERNAL_IPS = [
+            #...
+            '127.0.0.1',
+            #...
+        ]
+
+/*
+    What is migrations?
+    Each migration describes a set of changes, similar to commits in version control systems
+*/
+
+python manage.py makemigrations :
+    creates migrations for all the installed apps in the project, these files are used when migrating from development to production server,
+    .py code in these files will be converted MYSQL statements for creating tables and database
+
+python manage.py migrate :
+    command to run migrations
+
+/*
+    vscode extension named "SQLite" for using and opening SQLite databases in vscde"
+*/
+
+python manage.py sqlmigrate "name of migration (eg: store 0003)" :
+    displays actual code/sql-statements that are sent to our database during migration
+    the type of statements that are sent depends on the backend database that is used (eg: SQLite, MYSQL, PostgresSQL etc)
+
+python manage.py migrate "name of the migration to which you want to revert to" :
+    reverts the migration to the specified migration file
+
+pip install mysqlclient :
+    for using mysql database
+    also mysql server is required to be downloaded, if mysql workbench is installed than no need to install mysql server separately.
+
+    errors encountered while installing:
+        error: subprocess-exited-with-error :
+        occurs if libmysqlclient-dev build-essential is not installed, which are dependencies for installing mysqlclient
+        resolve by installing: sudo apt install libmysqlclient-dev build-essential
+    
+    settings.py should be modified to include the following in DATABASE:
+        To use environment variables import os.environ
+        DATABASES = {
+            "default": {
+                "ENGINE": "django.db.backends.mysql",
+                "NAME": "storefront",
+                "HOST": "localhost",
+                "USER": "root",
+                "PASSWORD": environ.get("DATABASE_PASSWORD"),
+            }
+        }
+
+
+python manage.py makemigrations store --empty :
+    # This command is used to create an empty migration file for the 'store' app in Django.
+    # The 'makemigrations' command is used to generate database migration files based on changes in the models.
+    # The '--empty' flag indicates that the migration file should be empty, without any changes to the database schema.
+    # This command is useful when you want to manually write the migration file instead of relying on Django's automatic migration generation.
