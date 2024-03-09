@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import mes.casetools.lab3.SYBCA2205141.Calculator;
+
 @SpringBootTest
 public class Firsttest {
     @Test
@@ -16,3 +18,25 @@ public class Firsttest {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
