@@ -15,6 +15,6 @@ public class Calculator {
  */
 
     public int add(int num1, int num2) {
-        return num1 + num2; // Let the numbers waltz together!
+        return num1 + num2; // Let the numbers waltz together!!
     }
 }
