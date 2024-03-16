@@ -2,7 +2,7 @@ package mes.casetools.lab3.SYBCA2205105;
 
 /**
  *  The Calculator class- where mathematical dreams comes true
- * Feel the pulse of addition as num1 and num2 merge in perfect unison.
+ * Lets go and see it!!
  */
 
 public class calculator {

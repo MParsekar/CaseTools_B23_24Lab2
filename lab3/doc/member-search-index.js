@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"mes.casetools.lab3.SYBCA2205105","c":"calculator","l":"add(int, int)","u":"add(int,int)"},{"p":"mes.casetools.lab3.SYBCA2205105","c":"calculator","l":"calculator()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{"p":"mes.casetools.lab3.SYBCA2205105","c":"Product","l":"prod(int, int)","u":"prod(int,int)"},{"p":"mes.casetools.lab3.SYBCA2205105","c":"Product","l":"Product()","u":"%3Cinit%3E()"}];updateSearchResults();
