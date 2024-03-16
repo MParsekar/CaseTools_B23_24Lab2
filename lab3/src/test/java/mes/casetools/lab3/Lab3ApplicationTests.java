@@ -21,4 +21,4 @@ class Lab3ApplicationTests {
 		assertEquals(3, answer);
 	}
 
-}
+}c
