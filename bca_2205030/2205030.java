@@ -4,6 +4,7 @@ class Simple
 {
     String name;
     int roll_no;
+    string email;
     double S1,S2,S3,S4,total,percent;
     void get_Info()
     {
